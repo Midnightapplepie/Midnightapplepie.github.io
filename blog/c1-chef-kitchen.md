@@ -1,7 +1,6 @@
-Cultural Blog
-Me and DBC
-
-Sep 21, 2014
+# Cultural Blog
+#### Me and DBC
+#### Sep 21, 2014
 
 Watched part of the DBC video, it's 2AM on a Sunday morning, I am tired but I paid for this so it's not a complain. I never thought any program out there, including DBC can really turn a person from knowing nothing into an developer. I see DBC as a resource to start building some basics and habit to self-learning. I believe that DBC will work out for many people because the programing community is different from other professions in which people who code seems more passionate about sharing ideas and knowledge and the ways they do things. If I have a question about how to use a method, I can search online and I'll find the answers that I am happy with and seeing the number of response people get for posting their questions online give me so much confidence in learning to code because I feel that I will be helped. 
 
