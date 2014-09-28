@@ -1,0 +1,60 @@
+html, body{
+	width:100%;
+	height:100%;
+	background-color: rgb(255, 255, 255);
+	margin: 0px;
+	z-index: 0;
+}
+.break{display: block;}
+
+.right{
+	width: 50%;
+	float: right;
+	margin-right: 9%;
+}
+
+#sidelinks{
+	position: fixed;
+	display: block;
+	float: left;
+	width: 30%;
+	height: 100%;
+	padding-top: 100px;
+	text-align: center;
+	background-color: grey;
+	z-index: 1;
+}
+
+#sidelinks>span{
+	margin-top: 10%;
+}
+
+#headlinks{
+	position: fixed;
+	display: block;
+	text-align: center;
+	padding-top: 30px;
+	padding-left: 15.5%;
+	padding-bottom: 60px;
+	background-color: rgb(82, 82, 82);
+	margin: 0px;
+	width: 100%;
+	z-index: 2;
+}
+
+#post{
+	background-color:white;
+	margin-top: 125px;
+	padding: 0px;
+	text-align: center;
+}
+
+
+#footer{
+	text-align: center;
+	padding-top: 50px;
+}
+
+#footer > a{
+	display: inline-block;
+}
