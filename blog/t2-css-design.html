@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../stylesheet/blog-stylesheet.css"/>
+<title>CSS Positioning</title>
+</head>
+<body>
+	<div id="sidelinks">
+		<span class="break"><img src="" alt=/><a href="">blog 1</a></span>
+		<span class="break"><img src="" alt=/><a href="">blog 2</a></span>
+		<span class="break"><img src="" alt=/><a href="">blog 3</a></span>
+		<span class="break"><img src="" alt=/><a href="">blog 4</a></span>
+	</div>
+	<div class="right" id="headlinks">
+		<a href=""><img src="" alt=/></a>
+		<a href=""><img src="" alt=/></a>
+		<a href=""><img src="" alt=/></a>
+		<a href=""><img src="" alt=/></a>
+	</div>
+	<div class="right" id="post">
+		<p>
+			<h1>Technical Blog<br>CSS Positioning</h1>
+			<h3>September 28, 2014</h3>
+			
+			<p>Positioning with CSS was difficult for me, but now I feel much better after watching some tutorial videos on youtube. So what's up with me and positioning with CSS? I just couldn't get boxes or "blocks" to where I want them to be and can't get contents inside a block to align at the center of the block. If you are a visual learner like me and want some good tips about positioning in CSS, you can watch this <a href="http://www.youtube.com/watch?v=gKvxlYCzJXw">video</a>.</p>
+			<p>So there 4 common positions:</p>
+			<ul>
+				<li>Static: this is the default value/keyword for the "position" property. An element with position set to static is positioned according to the html page. Static position disables top,left,right,bottom properties. so the element just stay at one place.</li>
+				<li>Relative: Relative position mean the element is positioned relative to its normal position, what that mean is, wherever the original position element was while it was "static", changing it to relative allows you to apply top, right, bottom, left properties to the element and reposition it from it's <strong>static</strong> position.</li>
+				<li>Absolute Positioning: This depends on the "static/original" position of the element within the boundry of it's immediate parent element. When Absolute Position is enabled, it actually detached from the original spot and other elements can go behind it and fill it's spot. Other elements on the page behave like absolute elements does not exist.</li>
+				<li>Fixed: This one is easy. Like Absolute, other elements on the page ignore fixed element and fixed element's static position is based on the browser window and once fixed properties is enabled, it will remain on that spot at the browsing window.</li>
+			</ul>
+			<p>Let's use some pictures here to illustrate the things I've mentioned. Here is the setup: html file with 4 "div" and CSS setup like this: div {width:100px; height:100px; top:50px; left:50px; position: static;}, and each div with it's individual background-color and a different position setting, one for static, absolute, relative and fixed. I use Google Dev Tool which make enabling and disabling individual position setting easier.</p>
+
+			<p>Before you do anything, try move an "div" element up and down within the "body" and see how the position changes on the screen since that's positioning too.</p>  
+			<p>Screen 1: The green box, I have setting top:50px; left:50px, since we didn't apply any position property to the green box, it's default to static and again shifting properties does not applies to static</p>
+			<img src="..\img\screen1.PNG"/>
+			<p>Screen 2: I have applied the absolute positioning and boxes below act if yellow box does not exist and took it's original spot, notice that the yellow box also shifted from left and top by 50px <strong>not</strong> from where it was sitting from from the corner of the page, so this demonstrate that absolute positioning acted in relation to their immediate parent's boundry.</p>
+			<img src="..\img\screen2.PNG"/>
+			<p>Screen 3: This is relative positioning, notice that even after it shifted, other boxes acted as if it still sit at it's original spot. Also notice how it shift 50px from left and from it's original spot. So it shift in relative with it's original static position, not it's parent like "absolute"</p>
+			<img src="..\img\screen3.PNG"/>
+			<p>Screen 4: I have added border to the body (all boxes immediate parent) and set margin:50px. Notice how the blue box with fixed positioning end up 50px from left and top of the window and not the body like absolute.</p>
+			<img src="..\img\screen4.PNG"/>
+			<p>And that is what I learn about positioning in CSS. Here is a <a href="http://www.w3schools.com/css/css_positioning.asp">link</a> if you want some quick tips on CSS.</p>
+		</p>
+	</div>
+	<div class="right" id="footer">
+		<a href= ""><img src="" alt=/><span class="break">link 1</span></a>
+		<a href= ""><img src="" alt=/><span class="break">link 2</span></a>
+		<a href= ""><img src="" alt=/><span class="break">link 3</span></a>
+		<a href= ""><img src="" alt=/><span class="break">link 4</span></a>
+	</div>
+</body>
+
+</html>
