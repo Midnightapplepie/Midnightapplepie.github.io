@@ -11,7 +11,7 @@ body{
 
 #logo{
     font-size: 35px;
-    font-family: fantasy;
+    font-family: fantasy, monospace, sans-serif;
     letter-spacing: 4px;
     padding-bottom: 15px;
     color: white;
@@ -21,7 +21,7 @@ body{
     border-radius: 20px;
 }
 
-#pie{font-size:45px;font-family: fantasy;}
+#pie{font-size:45px;}
 
 #pple{font-size:20px;text-decoration: underline;}
 
@@ -94,8 +94,8 @@ td{
 }
 
 #leftlist{
-    width: 15%;
-    min-width: 100px;
+    width: 280px;
+    min-width: 170px;
     height: 100%;
     position: static;
     float: left;
@@ -106,11 +106,11 @@ td{
     min-width: 100px;
     margin-bottom:20px;
     min-height: 60px;
-    height: 10%;
+    height: 70px;
     background-color: rgb(105, 194, 255);
     border: 5px solid rgb(177, 215, 231);
-    padding: 0px 0px 2% 0px;
-    font-family: sans-serif;
+    padding: 0px 0px 4px 0px;
+    font-family: sans-serif, monospace;
     border-radius: 20px;
 }
 
@@ -121,13 +121,13 @@ td{
 
 #message{
     text-align: center;
-    padding-top: 15%;
-    font-size: 20px;
-    width: 77%;
+    padding-top: 280px;
+    font-size: 22px;
+    width: 1466px;
     position: absolute;
-    right: 8%;
-    left: 15%;
-    font-family: sans-serif;
+    right: 150px;
+    left: 280px;
+    font-family: monospace, sans-serif;
     font-weight: bolder;
 }
 
