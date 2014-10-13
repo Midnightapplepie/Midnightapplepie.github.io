@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)file:///C:/Users/Fatty/Desktop/DBC/Midnightapplepie.github.io/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="../stylesheet/blog-stylesheet.css">
+		
+		<title>Group_by and Cycle</title>
+	</head>
+
+	<body>
+		<header>
+			<div id="logo">M9A<span id="pple">PPLE</span><span id="pie">&#x3C0;</span></div>
+		</header>
+
+		<section class="tc">
+			<div id="t1"></div>
+			<div id="t2"></div>
+			<div id="t3"></div>
+			<div id="t4"></div>
+			<div id="t5"></div>
+			<div id="t6"></div>
+			<div id="t7"></div>
+			<div id="t8"></div>
+			<div id="t9"></div>
+			<div id="t10"></div>
+		</section>
+
+		<nav>
+			<ul>
+				<li><a href="HTTP://Midnightapplepie.github.io">Home</a></li>
+				<li><a href="./about_me.html">About Me</a></li>
+				<li><a href="./Blog_home.html">Blog</a>
+					<ul>
+						<li><a href="./Cultural-blog.html">Cultural Blog</a></li>
+						<li><a href="./Technical-blog.html">Technical Blog</a></li>
+					</ul>
+				</li>
+				<li><a href="">Site Map</a></li>
+			</ul>
+		</nav>
+
+		
+		<section>
+			<article id="post">
+				<h1>Group_by and Cycle Methods</h1>
+				<h3>October 12, 2014</h3>
+				<p>Just learned some great Enumerable methods. Enumerables are basically a collection of elements that you can use "each" methods on. You can click on the links to read more about <a href="http://www.ruby-doc.org/core-2.0.0/Enumerable.html#method-i-group_by">Enumerable</a> and <a href="http://www.ruby-doc.org/core-2.0.0/Array.html#method-i-each">Each</a> methods. Enumerables are often Ranges and Arrays.</p>
+
+				<p>The first method I want to talk about is <strong>Group_by</strong>. What this method do is loop through a collection of elements, assign each element to a variable inside a block and group those elements in a Hash based on the result from the methods in the block.</p>
+
+				<p>(collection of elements).group_by{|variable| block} #=> a Hash where Keys are different results and Values are grouped elements who yield the same results.</p>
+
+				<p>Example 1. collection is an Array: <strong>[1,2,3,4,5,6]</strong><br>
+					[1,2,3,4,5,6].group_by{|number| number > 3}<br>
+					Each number in the array will be assigned to the variable 'number', and then compared to see if it's greater than 3, if it is, that number will yield 'true' and all numbers that yield 'true' will be grouped together inside the retuned Hash while all the 'false' will be in a separate group. Please see result below<br>
+					#=> <strong>{false=>[1,2,3], true=>[4,5,6]}</strong></p>
+
+				<p>Example 2. collection is a Range: <strong>(1..20)</strong><br>
+					(1..20).group_by{|number| number%2==0 and number%4==0}<br>
+					#=> {false=>[1,2,3,5,6,7,9,10,11,13,14,15,17,18,19], true=>[4,8,12,16,20]}, all numbers between 1 to 20 that are both divisible by 2 and 4 are grouped as 'true', while those that are not grouped as 'false'</p>
+
+				<p>Those other method that I want to talk about is <strong>Cycle</strong>. What this method does is loop through the collection of elements and performs methods inside the block n times. If n is not specified, then cycle will continue <strong>forever!</strong></p>
+
+				<p>(collection of elements).cycle(n){|variable| block}</p>
+
+				<p>Example 1: collection is an Array: <strong>[1,2,3,4,5,6]</strong><br>
+					[1,2,3,4,5,6].cycle(2){|number| print number}. This will print '123456' twice consecutively. Ruby will return #=> '123456123456'. This is because we indicate to repeat he cycle 2 times on the array, and each element in the array will be printed. This don't seems very useful right?</p>
+
+				<p>Example 2: collection is an Array: <strong>["Yes","NA","No"]</strong><br>
+					choice=["Yes","NA","No"].cycle. We assigned the array with infinit cycle to variable choice. It's now an instance of an Enumerator. We can use it by typing 'choice', and if we call 'choice.next' in Ruby, it'll return the first element "Yes", if we call 'next' on choice again, it'll return "NA", and again will return "No", and again it'll go back to "Yes". How will this be used?, I don't know but it's sure interesting.</p>
+			</article>
+		</section>
+
+		<table class="footer">
+			<tbody>
+				<tr>
+					<td><a id="linkedin" href="https://www.linkedin.com/pub/kevin-xu/60/48b/a59?trk=shareTw">in</a></td>
+					<td><a id="google" href="https://plus.google.com/105557385254980976957/about">g+</a></td>
+					<td><a id="git" href="https://github.com/Midnightapplepie">GitHub</a></td>
+					<td><a id="twitter" href="https://twitter.com/Mid9applepie">t</a></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div id="bottomcolor"></div>
+	
+
+</body></html>

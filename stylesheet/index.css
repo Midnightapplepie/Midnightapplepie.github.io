@@ -3,7 +3,7 @@ body{background-color: black;}
 body{margin:0px}
 header{
     font-size: 2.8em;
-    font-family: fantasy,Teko,Khand,sans-serif;
+    font-family: fantasy,"Teko","Khand",sans-serif;
     letter-spacing: 0.1em;
     color: white;
     background-color: black;
@@ -16,7 +16,7 @@ header{
     z-index: 1;
 }
 
-#pie{font-size: 1.3em;font-weight: bolder; font-family: fantasy,Didact Gothic;}
+#pie{font-size: 1.3em;font-weight: bolder; font-family: fantasy,"Didact Gothic";}
 
 #pple{font-size:0.500em ;text-decoration: underline;}
 
@@ -102,7 +102,7 @@ nav li:hover>ul{display: none;position: absolute;}/*turing this off for now*/
     text-align: center;
     font-size: 1.4em;
     position: relative;
-    font-family: monospace,Khand, sans-serif;
+    font-family: monospace,"Khand", sans-serif;
     font-weight: bolder;
     background-color: transparent;
     margin: 9% auto 9% auto;
@@ -112,11 +112,11 @@ nav li:hover>ul{display: none;position: absolute;}/*turing this off for now*/
 }
 
 #smile{font-size: .460em;font-weight: bolder;}
-#face{font-size: 1.5em;font-family: fantasy,Teko,Oswald;}
+#face{font-size: 1.5em;font-family: fantasy,"Teko","Oswald";}
 
 #M9AP{
     font-size: 2.25em;
-    font-family: fantasy,Teko, sans-serif;
+    font-family: fantasy,"Teko", sans-serif;
     font-weight: 700;
     color: white;
     border-radius: 20px;
