@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)file:///C:/Users/Fatty/Desktop/DBC/Midnightapplepie.github.io/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="../stylesheet/blog-stylesheet-tech.css">
+		
+		<title>Block,Proc, Lambda and Default Block</title>
+	</head>
+
+	<body>
+		<header>
+			<div id="logo">M9A<span id="pple">PPLE</span><span id="pie">&#x3C0;</span></div>
+		</header>
+
+		<section class="tc">
+			<div id="t1"></div>
+			<div id="t2"></div>
+			<div id="t3"></div>
+			<div id="t4"></div>
+			<div id="t5"></div>
+			<div id="t6"></div>
+			<div id="t7"></div>
+			<div id="t8"></div>
+			<div id="t9"></div>
+			<div id="t10"></div>
+		</section>
+
+		<nav>
+			<ul>
+				<li><a href="HTTP://Midnightapplepie.github.io">Home</a></li>
+				<li><a href="../about_me.html">About Me</a></li>
+				<li><a href="../Blog_home.html">Blog</a>
+					<ul>
+						<li><a href="./Cultural-blog.html">Cultural Blog</a></li>
+						<li><a href="./Technical-blog.html">Technical Blog</a></li>
+					</ul>
+				</li>
+				<li><a href="">Site Map</a></li>
+			</ul>
+		</nav>
+
+		
+		<section>
+			<article id="post">
+				<h1>Block, Proc, Lambda and Default Block</h1>
+				<h3>October 22, 2014</h3>
+				<p>To me, this is a very confusing topic and I am still a little confused about it but I'll try my best to explain it. First, I'll talk about what a <strong>Proc</strong> is. A <em>proc</em> is an object that is like a <em>block</em>, but it can be stored  and pass around like a method arguments and also be executed with a call method. Proc have it’s own class, the Proc class. Block does not have it's own class and it's not an object, and Lambda is a type of Proc. Just want to throw this out and I'll go over them later.</p>
+				<p><em>To create a proc:<br> variable=Proc.new {operation}</p>
+				<p>Example:<br>
+					prc= Proc.new {puts "I am inside a proc"}</p></em>
+				<p>As you can see, a proc is like a block but it can be stored as an object and be assigned to a variable. Some uses of a proc is when you want to write function ahead of time and store them in your program and choose an appropriate one when ready to use them. And one way to execute the proc is to call the proc. </p>
+				<p><em>To call the proc we created above:  prc.call and we'll get #=> "I am inside a proc"</em></p>
+				<p><strong>Turning a block to a proc</strong></p>
+				<p>You might have seen this before and let’s see how Ruby does the magic of turning a block to a proc.example below is a method with a "&"syntax in the argument, this signal conversion from a block (which is not an object) to a proc which can be used as an object for argument of a method that follows.</p>
+				<p><em>def block_to_proc(&blk)<br>
+					&nbsp&nbsp&nbsp&nbsp&nbsp blk.call<br>
+				   end</em></p>
+				<p>To execute the method,as usual we type “block_to_proc “ but instead of using the “()”, we leave it out and supply the method with a block.</p>
+				<p><em>block_to_proc {puts "I am a block that will be turned to a proc"}<br>
+					returns#=> "I am a block that will be turned to a proc"</em></p>
+				<p>The block provided next to the method called Proc.new, and takes the block and assign it to the variable inside the method “blk”, and the "&"" syntax tell Ruby that this is a block-proc conversion. That why we can do blk.call inside the method as if blk is a proc.</p>
+				<p><strong>Proc to block conversion</strong></p>
+				<p>We can do the other way around and convert a Proc to a block:</p>
+				<p><em>prc= Proc.new {|x| puts “I am going to act like a block “ *x}</p>
+				<p>[1,2].each(&prc)<br>
+					#=> I am going to act like a block<br>
+					#=> I am going to act like a block  I am going to act like a block</p>
+				<p>We can also use it in the method we created earlier “block_to_proc”<br>
+					proc= Proc.new {puts "I am going to act like a block"}<br>
+					block_to_proc(&prc) #=> “I am going to act like a block “</em></p>
+				<p><strong>The function of & and Symbol</strong></p>
+				<p>& actually is the method .to_proc and that’s how Ruby know to convert a block to Proc. Two things happen when you use &. It will convert an object to proc if it’s not yet a proc and then act a block.So from this proc example where we have:</p>
+				<p><em>prc = Proc.new {|i| puts “I am a proc”*i}</em></p>
+				<p>It’s is a proc and proc.to_proc does nothing, then & tell it to act as a block so we can use it like:<br><em>
+					[1,2].map(&prc) and technically we can leave out the “()” since it’s now a block:<br>
+					[1,2].map &prc <br>
+					#=> [“I am a proc”,”I am a procI am a proc”]</em></p>
+				<p>You might have seen codes like [“1”,”2”,”3”].map(&:to_i) #=> [1,2,3] and this is symbol to_proc and then act as a block. All methods name in Ruby are stores in a list of symbols and the method to_i here as well. The method to_i is represented by the symbol :to_i. &:to_i will turn the method to a proc and then work like a block so we can use syntax like obj.map &prc. It’s the same as object.map{|x| x.to_i}. This is not how it actually work because the conversion to_proc depends on how the method to_proc is designed to work at the object’s class level. And to_proc for Symbol class is something like this according to the book “The Well-Grounded Rubiest”:</p>
+				<p><strong>Lambda</strong></p>
+				<p>Lambda is a type of proc. The main difference between a normal proc and lambda is that proc can be created from a block with & and the proc created is not a lambda. Lambda can only be created explicitly by:</p>
+				<p><em>Variable_name = lambda {operation}</em></p>
+				<p>The second difference is that return used inside the body({ }) of a lambda exit the lambda where use of return inside the body of a proc will exit the method where the proc is in. “The Well-Grounded Rubiest” also mention that if the proc is outside a method, a return in its body can cause serious issue to a program, so many have suggested avoiding use of return with procs. The final difference between proc and lambda is that lambda pay attention to the number of argument being passed to it.</p>
+				<p>Example:<em><br>
+					prc= Proc.new {|x| puts x*3}<br>
+					prc.call(5,1,3) #=>15<br>
+					(proc will take the first argument and execute the block and ignore the rest)<br>
+					lam= lambda {|x|puts x*3}<br>
+					lam.call(5,3,1) #=> this is raise ArgumentError for 3 arguments were passed while only 1 is to be taken.<br>
+					To make it work with 3 arguments, it must be designed to take 3 or more.<br>
+					Ex. lam = lambda{|x,y,z| puts x*3; puts y*3; puts z*3}<br>
+					or take multiple lam=lambda {|*x| x.each{|i| puts i*3}}</em></p>
+				<p><strong>The Default Block</strong></p>
+				<p>Now we have just went over Proc and Lambda and how they can be used as a blcok and as an argument for a method, I want to add in Default Block which works like putting a proc as an argument and to be called inside a method to return the operation from the body of the proc. But instead using “.call” to execute the proc, yield is used to execute the default block.</p>
+				<p>Example:<em><br>
+					def I_take_any_blcok<br>
+						yield<br>
+					end<br>
+					to execute:<br>
+					I_take_any_block {puts "I will get printed, I’m from the defaut block"}</em></p>
+				<p>It’s works similar to convert a block to a proc and the proc gets called by the method and prints out a message like an example we went over earlier. But instead of going over the whole conversion, we can use yield to execute a block directly. Here is a quick video about this topic that might be useful: <a href="https://www.youtube.com/watch?v=K8uhD8mtorE">Default Blcok, Proc and Lambda</a></p>
+
+			</article>
+		</section>
+
+		<table class="footer">
+			<tbody>
+				<tr>
+					<td><a id="linkedin" href="https://www.linkedin.com/pub/kevin-xu/60/48b/a59?trk=shareTw">in</a></td>
+					<td><a id="google" href="https://plus.google.com/105557385254980976957/about">g+</a></td>
+					<td><a id="git" href="https://github.com/Midnightapplepie">GitHub</a></td>
+					<td><a id="twitter" href="https://twitter.com/Mid9applepie">t</a></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div id="bottomcolor"></div>
+	
+
+</body></html>
