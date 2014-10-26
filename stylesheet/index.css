@@ -1,24 +1,21 @@
 *{box-sizing: border-box;}
+
+img {
+    width: 100%;
+    height: 100%;
+}
 body{background-color: black;}
 body{margin:0px}
 header{
-    font-size: 2.8em;
-    font-family: fantasy,"Teko","Khand",sans-serif;
-    letter-spacing: 0.1em;
-    color: white;
     background-color: black;
     float: left;
-    min-width: 300px;
-    min-height: 100px;
-    text-align: center;
+    width: 300px;
+    height: 100px;
     position: relative;
     padding-top: 10px;
     z-index: 1;
 }
 
-#pie{font-size: 1.3em;font-weight: bolder; font-family: fantasy,"Didact Gothic";}
-
-#pple{font-size:0.500em ;text-decoration: underline;}
 
 section{
     width: 100%;
@@ -115,15 +112,10 @@ nav li:hover>ul{display: none;position: absolute;}/*turing this off for now*/
 #face{font-size: 1.5em;font-family: fantasy,"Teko","Oswald";}
 
 #M9AP{
-    font-size: 2.25em;
-    font-family: fantasy,"Teko", sans-serif;
-    font-weight: 700;
-    color: white;
-    border-radius: 20px;
-    border: 2px solid rgb(228, 156, 156);
-    background-color: rgb(182, 28, 28);
+    border: 2px solid white;
     margin: 2%;
     width: 510px;
+    align-items: center;
 }
 
 #bottomcolor{
