@@ -2,7 +2,7 @@
 body{background-color: rgb(170, 2, 2);}
 body{margin:0px}
 
-img{
+#logo>img,#M9AP>img{
     width: 100%;
     height: 100%;
 }

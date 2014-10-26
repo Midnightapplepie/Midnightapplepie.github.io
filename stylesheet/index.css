@@ -1,11 +1,13 @@
 *{box-sizing: border-box;}
 
-img {
+#logo>img,#M9AP>img{
     width: 100%;
     height: 100%;
 }
+
 body{background-color: black;}
 body{margin:0px}
+
 header{
     background-color: black;
     float: left;
@@ -112,10 +114,9 @@ nav li:hover>ul{display: none;position: absolute;}/*turing this off for now*/
 #face{font-size: 1.5em;font-family: fantasy,"Teko","Oswald";}
 
 #M9AP{
-    border: 2px solid white;
     margin: 2%;
     width: 510px;
-    align-items: center;
+    text-align: center;
 }
 
 #bottomcolor{
