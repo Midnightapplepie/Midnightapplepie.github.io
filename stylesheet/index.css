@@ -1,6 +1,6 @@
 *{box-sizing: border-box;}
 
-#logo>img,#M9AP>img{
+#logo>a>img,#M9AP>img{
     width: 100%;
     height: 100%;
 }
