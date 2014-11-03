@@ -27,6 +27,15 @@ header{
     min-height: 10px;
 }
 
+.code {
+    border: 1px solid  black;
+    font-family: sans-serif;
+    text-align: left;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+    font-size: 0.8em;
+}
+
 #t1{background-color: maroon;}
 #t2{background-color: rgb(182, 0, 0);}
 #t3{background-color: rgb(206, 0, 0);}
