@@ -122,7 +122,7 @@ td>a{
 #twitter{
     background-color:#55acee;
     font-size: 3em;
-    font-family: fantasy, "khand";
+    font-family: "impact",fantasy, "khand";
 }
 
 #google{
@@ -134,7 +134,7 @@ td>a{
 #git{
     background-color:black;
     font-size:1.5em;
-    font-family: fantasy,"khand","teko";
+    font-family: "impact",fantasy,"khand","teko";
     padding-top:25px;
 }
 
