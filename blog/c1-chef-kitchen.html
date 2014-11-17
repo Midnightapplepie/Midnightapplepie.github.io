@@ -1,66 +1,69 @@
 <!DOCTYPE html>
 <!-- saved from url=(0072)file:///C:/Users/Fatty/Desktop/DBC/Midnightapplepie.github.io/index.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" type="text/css" href="../stylesheet/blog-stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="../stylesheet/index.css">
 		
-		<title>Chef and Kitchen</title>
+		<title>Midnight⋅Applepie</title>
 	</head>
 
-	<body>
-		<header>
-			<div id="logo"><img src="../img/MNAP.jpg"></div>
-		</header>
+<body>
+	<canvas id="myCanvas"></canvas>
+	<script type="text/javascript" src="../JS.js"></script>
 
-		<section class="tc">
-			<div id="t1"></div>
-			<div id="t2"></div>
-			<div id="t3"></div>
-			<div id="t4"></div>
-			<div id="t5"></div>
-			<div id="t6"></div>
-			<div id="t7"></div>
-			<div id="t8"></div>
-			<div id="t9"></div>
-			<div id="t10"></div>
-		</section>
-
-		<nav>
-			<ul>
-				<li><a href="HTTP://Midnightapplepie.github.io">Home</a></li>
-				<li><a href="../about_me.html">About Me</a></li>
-				<li><a href="../Blog_home.html">Blog</a>
-					<ul>
-						<li><a href="">Cultural Blog</a></li>
-						<li><a href="">Technical Blog</a></li>
-					</ul>
-				</li>
-				<li><a href="">Site Map</a></li>
-			</ul>
-		</nav>
-
-		
-		<section id="post">
-			<article>
+	<section id="blog">
+		<post>
 				<h1>Me and DBC</h1>
 				<h3>Sep 21, 2014</h3>
 				<p>Watched part of the DBC video, it's 2AM on a Sunday morning, I am tired but I paid for this so it's not a complain. I never thought any program out there, including DBC can really turn a person from knowing nothing into an developer. I see DBC as a resource to start building some basics and habit to self-learning. I believe that DBC will work out for many people because the programing community is different from other professions in which people who code seems more passionate about sharing ideas and knowledge and the ways they do things. If I have a question about how to use a method, I can search online and I'll find the answers that I am happy with and seeing the number of response people get for posting their questions online give me so much confidence in learning to code because I feel that I will be helped.</p>
 				
 				<p>I will not be surprised by the structure of DBC as I come in with a pretty open mindset. I know that if one wants to learn everything being taught by DBC, there is a good chance that they can learn it from resources online, through books and connections themselves. What I think DBC can do is put me in an environment and provides the connection to professionals that will accelerate the self-learning process and accomplishments. What I expect from DBC is that after the program, I am well prepared to continue learning effectively on my own. I am glad that DBC is more like a kitchen rather than a restaurant because foods taste better when you cook it yourself.</p>
-			</article>
-		</section>
+			</post>
+		<ul id="titles">
+			<li onclick="getPost()">test</li>
+			<li><a href="./blog/t1-git-blog.md.html">About Version Control</a></li>
+			<li><a href="./blog/t2-css-design.html">CSS Positioning</a></li>
+			<li><a href="./blog/t3-arrays-hashes.html">Array and Hash</a></li>
+			<li><a href="./blog/t4-enumerable-methods.html">Group_by and cycle</a></li>
+			<li><a href="./blog/t5-ruby-classes.html">Ruby-Class</a></li>
+			<li><a href="./blog/t6-oop-concepts.html">Block, Proc, Lambda and Default Block</a></li>
+			<li><a href="./blog/t7-JavaScript.html">Ruby class and Javascript constructor</a></li>
+			<li><a href="./blog/t8-tech.html">SQL Injection</a></li>
+			<li><a href="./cheat_sheet.html">JS Cheat Sheet</a></li>
+		</ul>
+	</section>
 
-		<table class="footer">
-			<tbody>
-				<tr>
-					<td><a id="linkedin" href="https://www.linkedin.com/pub/kevin-xu/60/48b/a59?trk=shareTw">in</a></td>
-					<td><a id="google" href="https://plus.google.com/105557385254980976957/about">g+</a></td>
-					<td><a id="git" href="https://github.com/Midnightapplepie">GitHub</a></td>
-					<td><a id="twitter" href="https://twitter.com/Mid9applepie">t</a></td>
-				</tr>
-			</tbody>
-		</table>
+	<div id="content">
+		<div class="icons" id="logo">
+			MIDNIGHTAPPLEPIE
+		</div>
+		<nav id="tabs">
+			<div class="icons" onclick="home()"><a>Home</a></div>
+			<div class="icons" onclick=getElementById("myInfo").style.left="33.33%"><a >About Me</a></div>
+			<div class="icons" onclick="blog()"><a>Blog</a></div>
+			<div class="icons"><a hrf="">Site Map</a></div>
+		</nav>
+	</div>
 
-		<div id="bottomcolor"></div>
-	
+	<div id="footer">
+			<div id="footerSlider">
+				<a id="linkedin" href="https://www.linkedin.com/pub/kevin-xu/60/48b/a59?trk=shareTw">in</a>
+				<a id="google" href="https://plus.google.com/105557385254980976957/about">g+</a>
+				<a id="git" href="https://github.com/Midnightapplepie">GitHub</a>
+				<a id="twitter" href="https://twitter.com/Mid9applepie">t</a>
+			</div>
+	</div>
 
-</body></html>
+	<div id="note">
+		The background is a recreation of an awsome project by <a href="http://9elements.com/io/projects/html5/canvas/">9Elements.com</a>
+	</div>
+
+	<button type="button" onclick="switchColors()" id="switch" class="icons">SWITCH</button>
+
+	<article id="aboutMe">
+		<p id="myInfo">My name is <span>Kevin Xu</span>,<br>I am a student at Dev Bootcamp SF.
+		<button type="button" onclick=getElementById("myInfo").style.left="-100%" id="closeMyInfo">X</button>
+		</p>
+	</article>
+
+</body>
+</html>

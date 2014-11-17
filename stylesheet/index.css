@@ -6,11 +6,13 @@ html,body{
     width: 100%;
     display: flex;
     flex-direction:column;
+    overflow: hidden;
 }
 canvas{
     position:absolute; 
 }
 
+/*top headers=============*/
 #content{
     padding: 1%;
     display: inline-block;
@@ -28,6 +30,7 @@ canvas{
     padding: 8px;
     display: table;
     min-width: 100px;
+    margin: 0 8px 0 0;
 }
 
 #logo{
@@ -54,17 +57,7 @@ canvas{
     text-decoration: none;
 }
 
-section{
-    width: 100%;
-    position: absolute;
-    z-index: 0;
-}
-
-#wrapper{
-    flex:1 1 auto;
-    width: 100%;
-}
-
+/*fonts===================*/
 @font-face{
     font-family:"chalk";
     src: url("../font/chalk.ttf") format('truetype');
@@ -74,42 +67,43 @@ section{
     src: url("../font/impact.ttf") format('truetype');
 }
 
-.message{
-    padding-top: 25%;
-    text-align: center;
-    position: relative;
-    font-size: 2em;
-    font-family: "chalk",monospace,"Khand", sans-serif;
-    font-weight: bolder;
-}
 
-
+/*footer and links============*/
 #footer{
+    position: absolute;
     text-align:center; 
     width: 100%;
-    opacity: 0.4;
+    opacity: 0.5;
+    height:19%;
+    bottom: 0;
+    overflow: hidden;
 }
 
-td{
-    display:inline-block;
-    margin:2%;
+#footerSlider{
+    position: absolute;
+    margin: 1.5%;
+    transition: 1.5s;
+    right: 36%;
+
 }
 
-td a:hover{
+#footer div a:hover{
     bottom:0.4em;
 }
 
-td>a{
+#footer div a{
+    float: left;
+    display: block;
+    position: relative;
+    color: white;
+    text-decoration: none;
     width: 100px;
     height: 100px;
-    display: inline-block;
     border: 10px solid white;
     border-radius: 20px;
-    margin: 4%;
-    color: white;
-    position: relative;
-    text-decoration: none;
-    padding-top:10px;
+    text-align: center;
+    margin: 20px;
+    padding-top: 8px;
 }
 
 #linkedin{
@@ -123,6 +117,7 @@ td>a{
     background-color:#55acee;
     font-size: 3em;
     font-family: "impact",fantasy, "khand";
+
 }
 
 #google{
@@ -135,9 +130,9 @@ td>a{
     background-color:black;
     font-size:1.5em;
     font-family: "impact",fantasy,"khand","teko";
-    padding-top:25px;
 }
 
+/*Note and Switch=============*/
 #note{
     position: absolute;
     left: 20px;
@@ -162,4 +157,85 @@ td>a{
     bottom: 40px;
     margin: 0;
     background-color: white;
+}
+
+/*codes for about Me=====================*/
+
+#aboutMe{
+    position: absolute;
+    overflow:hidden;
+    width: 75%;
+    height:50%;
+    border: none;
+    background: none;
+    top:0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#myInfo{
+    padding: 2%;
+    text-align: center;
+    font-size: 2em;
+    font-family: sans-serif;
+    position: absolute;
+    left: -100%;
+    width: 66.67%;
+    height: 100%;
+    background:black;
+    color: White;
+    opacity: 0.6;
+    transition: 1.5s;
+    margin: 0;
+    border-radius: 50px;
+}
+
+#closeMyInfo{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    margin: 2%;
+    border-radius: 50%;
+    border: 5px solid white;
+    color: white;
+    background: none;
+    font-size: 1em;
+}
+
+/*Blog===================*/
+#blog{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: orange;
+    top:-100%;
+    transition:2s;
+}
+
+#blog ul{
+    position: relative;
+    background: #3f3f3f;
+    width: 50%;
+    height: 80%;
+    padding: 0;
+    margin: 0;
+    top:100px;
+    margin: 0 25% 10% 25%;
+    border-radius: 50px;
+    border:10px solid black;
+    padding: 2%;
+    list-style-type: none;
+}
+
+li>a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-family:sans-serif ,serif;"impact",monospac;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0 10px 30%;
 }

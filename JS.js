@@ -2,7 +2,18 @@ var canvas=document.querySelector("#myCanvas");
 canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
 var ctx=canvas.getContext("2d");
-//clear canvase
+
+
+function blog(){
+	document.getElementById("footerSlider").style.right="-36%";
+	document.getElementById("blog").style.top="0";
+};
+
+function home(){
+	document.getElementById("footerSlider").style.right="36%";
+	document.getElementById("blog").style.top="-100%";
+};
+//switch background color;
 var background="white"
 function switchColors(){
 	if (background=="white"){
@@ -12,6 +23,7 @@ function switchColors(){
 	}
 };
 
+//clear canvase
 function newCanvas(){
 	ctx.clearRect(0,0,canvas.width,canvas.height);
 	if (background==="white"){
