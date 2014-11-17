@@ -3,7 +3,6 @@ canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
 var ctx=canvas.getContext("2d");
 
-
 function blog(){
 	document.getElementById("footerSlider").style.right="-36%";
 	document.getElementById("blog").style.top="0";
