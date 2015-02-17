@@ -14,7 +14,7 @@
     var buttons = select('#projects');
     buttons.addEventListener("click",function(event){
         var template = event.target.id;
-        if (event.target.nodeName === "DIV"){
+        if (event.target.class === "buttons"){
             render("./templates/"+template);
         }
     })
