@@ -1,70 +1,41 @@
-<!DOCTYPE html>
-<!-- saved from url=(0072)file:///C:/Users/Fatty/Desktop/DBC/Midnightapplepie.github.io/index.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" type="text/css" href="./stylesheet/index.css">
-		
-		<title>Midnight⋅Applepie</title>
-	</head>
-
-<body>
-	<canvas id="myCanvas"></canvas>
-	<script type="text/javascript" src="JS.js"></script>
-
-	<section id="blog">
-		<ul id="titles">
-			<li><a href="./blog/t1-git-blog.md.html">About Version Control</a></li>
-			<li><a href="./blog/t2-css-design.html">CSS Positioning</a></li>
-			<li><a href="./blog/t3-arrays-hashes.html">Array and Hash</a></li>
-			<li><a href="./blog/t4-enumerable-methods.html">Group_by and cycle</a></li>
-			<li><a href="./blog/t5-ruby-classes.html">Ruby-Class</a></li>
-			<li><a href="./blog/t6-oop-concepts.html">Block, Proc, Lambda and Default Block</a></li>
-			<li><a href="./blog/t7-JavaScript.html">Ruby class and Javascript constructor</a></li>
-			<li><a href="./blog/t8-tech.html">SQL Injection</a></li>
-			<li><a href="./cheat_sheet.html">JS Cheat Sheet</a></li>
-			<li><a href="./blog/c1-chef-kitchen.html">Me and DBC</a></li>
-			<li><a href="./blog/c2_thinking-style.html">Thinking Style and Learning</a></li>
-			<li><a href="./blog/c3-tech-issues.html">Cyber Security</a></li>
-			<li><a href="./blog/c4-feedback.html">Feedback from Pairing</a></li>
-			<li><a href="./blog/c5-stereotype-threat.html">Stereotype Threat</a></li>
-			<li><a href="./blog/c6-values.html">Values</a></li>
-			<li><a href="./blog/c7-conflict.html">Conflict</a></li>
-			<li><a href="./blog/c8-questions.html">Questions</a></li>
-			<li><a href="./blog/c9-project.html">Project</a></li>
-		</ul>
-	</section>
-
-	<div id="content">
-		<div class="icons" id="logo">
-			MIDNIGHTAPPLEPIE
-		</div>
-		<nav id="tabs">
-			<div class="icons" onclick="home()"><a>Home</a></div>
-			<div class="icons" onclick=getElementById("myInfo").style.left="33.33%"><a >About Me</a></div>
-			<div class="icons" onclick="blog()"><a>Blog</a></div>
-			<div class="icons"><a hrf="">Site Map</a></div>
-		</nav>
-	</div>
-
-	<div id="footer">
-			<div id="footerSlider">
-				<a id="linkedin" href="https://www.linkedin.com/pub/kevin-xu/60/48b/a59?trk=shareTw">in</a>
-				<a id="google" href="https://plus.google.com/105557385254980976957/about">g+</a>
-				<a id="git" href="https://github.com/Midnightapplepie">GitHub</a>
-				<a id="twitter" href="https://twitter.com/Mid9applepie">t</a>
-			</div>
-	</div>
-
-	<div id="note">
-		The background is a recreation of an awsome project by <a href="http://9elements.com/io/projects/html5/canvas/">9Elements.com</a>
-	</div>
-
-	<button type="button" onclick="switchColors()" id="switch" class="icons">SWITCH</button>
-
-	<article id="aboutMe">
-		<p id="myInfo">My name is <span>Kevin Xu</span>,<br>I am a student at Dev Bootcamp SF.
-		<button type="button" onclick=getElementById("myInfo").style.left="-100%" id="closeMyInfo">X</button>
-		</p>
-	</article>
-
-</body>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JH Kevin Xu</title>
+        <link rel="stylesheet" href="css/home.css">
+    </head>
+    <body>
+    	<div class="w-60 h-20 d-ib">
+    		<nav class="t-40 nav pd-1e">
+	    		<a href="">Home</a>
+	    		<a id = "aboutMe" href="">About Me/Porfolio</a>
+	    		<a id = "resume" href="">Resume</a>
+	    	</nav>
+    	</div>
+        <div id="view" class="w-100 h-80">
+        	<div id="mainContainer" class="main-container">
+        		<div class="w-30 h-100 d-ib fl-l">
+        			<div class=" w-100 h-60 d-ib c-w"><div class="message d-ib w-90 h-90"><div class="shadow d-ib"><p class="va-m">I</p></div></div></div>
+        			<div class=" w-100 h-40 d-ib c-r"><div class="message d-ib w-90 h-90"><div class="shadow d-ib"><p class="va-m">LOVE</p></div></div></div>
+        		</div>
+        		<div class="w-40 h-100 d-ib">
+        			<div class=" w-100 h-100 d-ib c-b"><div class="message d-ib w-90 h-95"><div class="shadow d-ib"><p class="va-m">SIMPLE</p></div></div></div>
+        		</div>
+        		<div class="w-30 h-100 d-ib fl-r">
+        			<div class=" w-100 h-40 d-ib c-w"><div class="message d-ib w-90 h-90"><div class="shadow d-ib"><p class="va-m">COLORS</p></div></div></div>
+        			<div class=" w-100 h-20 d-ib c-b"><div class="message d-ib fs-1em w-90 h-80"><div class="shadow d-ib"><p class="va-m">&</p></div></div></div>
+    				<div class=" w-100 h-40 d-ib c-w"><div class="message d-ib w-90 h-90"><div class="shadow d-ib"><p class="va-m">DESIGN</p></div></div></div>
+        		</div>
+        	</div>
+        </div>
+        <footer>
+            <a href=""></a>
+        </footer>
+    </body>
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="js/index.js"></script>
+

@@ -3,15 +3,6 @@ canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
 var ctx=canvas.getContext("2d");
 
-function blog(){
-	document.getElementById("footerSlider").style.right="-36%";
-	document.getElementById("blog").style.top="0";
-};
-
-function home(){
-	document.getElementById("footerSlider").style.right="36%";
-	document.getElementById("blog").style.top="-100%";
-};
 //switch background color;
 var background="white"
 function switchColors(){
@@ -170,19 +161,3 @@ draw()
 for (i=0;i<15;i++){
 	setInterval(function(){updateGlow(0.02)},400+i*150);
 };
-
-
-/*======growth rate======================
-function randomRate(){
-	var rate=[0.1,0.25,0.5,0.75];
-	return rate[rand(rate.length)];
-}
-*/
-
-
-/*======Max Size===========================
-function randomSize(){
-	var multiple=getRange(2,5)
-	return multiple[rand(multiple.length)]
-}
-*/
