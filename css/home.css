@@ -160,6 +160,17 @@ html, body{
         cursor: pointer;
 }
 
+.link{
+        width: 15em;
+        height: 15em;
+        margin: 2em;
+        border-radius: 10%;
+        background: orange;
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none
+}
+
 .va-m{
         position: relative;
         top: 50%;
