@@ -66,9 +66,14 @@ $(document).scroll(function(){
 
 function showMessage(n,elements){
 	if (n < elements.length){
-		$(elements[n]).fadeIn(1000);
+		$(elements[n]).fadeIn();
+		$(elements[n]).css("transform","translateY(0px)");
 		setTimeout(function(){
 			showMessage(n+1,elements)
-		},1000)
+		},200)
 	}
 }
+
+var resume = $('iframe').contents().find("body").height();
+
+console.log(resume);
