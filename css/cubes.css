@@ -8,31 +8,50 @@
 
 		display: inline-block;
 		margin: 1em;
-		width: 80px;
-		height: 80px;
+		width: 20vw;
+		height: 20vw;
+	}
+
+	.op-bottom{
+		-webkit-transform:translateY(10vw) rotateX(-90deg);
+		transform:translateY(10vw) rotateX(-90deg);
+
+		-webkit-transition: all 0.5s;
+		transition: all 0.5s;
+
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		/*border: 1px solid black;*/
+		background: black;
 	}
 
 	.bottom{
-		-webkit-transform:translateY(40px) rotateX(-90deg);
-		transform:translateY(40px) rotateX(-90deg);
+		background: #241E1E;
+		opacity: 0.2;
+	}
 
-		position: absolute;
-		color: white;
-		border: 1px solid	black;
+	.op-front{
+
+		-webkit-transform: translateZ(10vw);
+		transform: translateZ(10vw);
+
+		-webkit-transition: all 0.5s;
+		transition: all 0.5s;
+
 		width: 100%;
 		height: 100%;
+		position: relative;
+		/*border: 1px solid black;*/
+		background: white;
 	}
 
 	.front{
+		background: #635454;
+		opacity: 1;
 
-		-webkit-transform: translateZ(40px);
-		transform: translateZ(40px);
-
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		color: white;
-		border: 1px solid black;
+		-webkit-transition: all 0.5s;
+		transition: all 0.5s;
 	}
 
 	.cube{
@@ -54,6 +73,7 @@
 		width: 100%;
 		height: 100%;
 		position: relative;
+		color: white;
 
 		display: -webkit-flex;
 		display: flex;
@@ -71,4 +91,18 @@
 		
 		-webkit-transition: all 0.5s;
 		transition: all 0.5s;
+	}
+
+	.cube:hover .bottom{
+		opacity: 0.9;
+
+		-webkit-transition: all 1s;
+		transition: all 1s;
+	}	
+
+	.cube:hover .front{
+		opacity: 0.2;
+
+		-webkit-transition: all 1s;
+		transition: all 1s;
 	}

@@ -11,15 +11,12 @@ function select(name){
 		return document.createElement(name);
 	}
 
-	function makeSquare(color,className,val){
+	function makeSquare(className,val){
 		var div = make('div');
 			content = make('div');
 			content.innerHTML = val;
-			content.className = "content";
+			content.className = "content "+className.substr(3,className.length-1);
 			div.className = className
-			div.style.backgroundColor = color;
-			// div.style.height = sideLength;
-			// div.style.width = sideLength;
 			div.appendChild(content);
 		return div
 	}
@@ -27,8 +24,8 @@ function select(name){
 
 
 	function createCube(letter){
-		var front = makeSquare("red","front",letter);
-		var top = makeSquare("green","bottom",letter);
+		var front = makeSquare("op-front",letter);
+		var top = makeSquare("op-bottom",letter);
 		var cube = make('div');
 			cube.className = "cube";
 
@@ -42,6 +39,6 @@ function select(name){
 
 	for(i in message){
 		var container = message[i];
-		var letter = container.id;
-		container.appendChild(createCube(letter));
+		var word = container.id.toUpperCase();
+		container.appendChild(createCube(word));
 	}
