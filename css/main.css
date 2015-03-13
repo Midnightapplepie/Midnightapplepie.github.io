@@ -1,3 +1,128 @@
+*{
+    box-sizing: border-box;
+}
+
+
+@font-face {
+font-family: viga;
+src: url("../font/Viga-Regular.otf") format("opentype");
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: viga;
+    letter-spacing: 0.15em
+}
+
+.w-100pc{
+    width: 100%;
+}
+
+.w-50pc{
+    width: 50%;
+}
+/*------------------------------------*/
+.h-8pc{
+    height: 8%;
+}
+
+.h-70vh{
+    height: 70vh;
+}
+
+.h-30pc{
+    height: 30%;
+}
+.h-100pc{
+    height: 100%;
+}
+.h-10vh{
+    height: 10vh;
+}
+
+/*------------------------------------*/
+
+.bg-grey{
+    background: rgba(59, 59, 59);
+}
+
+.bg-grey{
+    background: #3b3b3b;
+;
+}
+
+.bg-grn{
+    background: green;
+}
+
+/*------------------------------------*/
+
+.c-wht{
+    color: white;
+}
+.c-trsp{
+    color: transparent;
+}
+/*------------------------------------*/
+
+.fl-r{
+    float:right;
+}
+/*------------------------------------*/
+
+.full-size{
+    width: 100%;
+    height: 100%;
+}
+/*------------------------------------*/
+
+.pd-3em{
+    padding: 3em;
+}
+.pd-1em{
+    padding: 1em;
+}
+
+.pd-t-10vh{
+    padding-top: 10vh;
+}
+/*------------------------------------*/
+
+.ta-c{
+    text-align: center;
+}
+/*------------------------------------*/
+
+.po-fix{
+    position: fixed;
+}
+/*------------------------------------*/
+
+.zi-1{
+    z-index: 1;
+}
+
+/*------------------------------------*/
+
+.op-0-8{
+    opacity: 0.8;
+}
+
+/*------------------------------------*/
+.dp-ib{
+    display: inline-block;
+}
+.dp-b{
+    display: block;
+}
+/*------------------------------------*/
+.dp-inflex-m{
+    display: inline-flex;
+    align-items:center; /*vertiical align middle*/
+    justify-content: center;/*flex center horizontal*/
+}
+
 /*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
 
 /*

@@ -31,14 +31,19 @@ function select(name){
 
 		cube.appendChild(top);
 		cube.appendChild(front);
-		console.log(cube);
 		return cube;
 	}
 
 	var message = select('.container');
-
-	for(i in message){
+	for(var i=0; i < message.length; i++){
 		var container = message[i];
-		var word = container.id.toUpperCase();
+		var word = container.id;
 		container.appendChild(createCube(word));
 	}
+
+	$('.cube').on('touchstart hover focus click',function(e){
+		if(e.type == 'hover'){
+			console.log(e.target);
+			$(e.target).trigger('focus');
+		}
+	})
