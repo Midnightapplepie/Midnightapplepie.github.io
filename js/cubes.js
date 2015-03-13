@@ -37,13 +37,13 @@ function select(name){
 	var message = select('.container');
 	for(var i=0; i < message.length; i++){
 		var container = message[i];
-		var word = container.id;
+		var word = container.id.toUpperCase();
 		container.appendChild(createCube(word));
 	}
 
-	$('.cube').on('touchstart hover focus click',function(e){
-		if(e.type == 'hover'){
+	$('.cube').on('touchstart hover focus',function(e){
+		if(e.type == 'touchstart'){
 			console.log(e.target);
-			$(e.target).trigger('focus');
+			$(e.target).trigger('hover');
 		}
 	})

@@ -6,7 +6,6 @@
 	transform: translateY(100px);
 	transition: transform 1s;
 }
-
 /*------------------------------------*/
 
 .nav-item{
@@ -18,9 +17,27 @@
 	font-size: 1.75vh;
 }
 
+.pic-frame{
+	border: 2px solid black;
+	border-radius: 50%;
+	margin: 2em;
+}
+
+/*@media screen and (min-width: 690px) {
+	.pic-frame{
+		float: right;
+	}
+}*/
+
 @media screen and (orientation:landscape){
 	.square{
 		height: auto;
+		min-height: 40vw;
+		width: 60vw;
+		display: inline-block;
+	}
+
+	.wrapper{
 		width: 60vw;
 		display: inline-block;
 	}
@@ -28,8 +45,28 @@
 
 @media screen and (orientation:portrait){	
 	.square{
-		height: 100vw;
+		height: auto;
+		min-height: 100vw;
 		width: 100vw;
 		display: inline-block;
 	}
+
+	.wrapper{
+		width: 100vw;
+	}
+}
+
+
+
+.test{
+	perspective: 800px;
+}
+
+.test-c{
+	transform: translateZ(-50000px);
+}
+
+.test:hover .test-c{
+	transform: translateZ(0px);
+	transition: all 1s ease;
 }

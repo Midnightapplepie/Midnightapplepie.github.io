@@ -101,6 +101,7 @@
 	height: 100%;
 	position: relative;
 	color: white;
+	font-size: 0.75em;
 
 	display: -webkit-flex;
 	display: flex;

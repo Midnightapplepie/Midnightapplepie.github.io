@@ -11,8 +11,11 @@ src: url("../font/Viga-Regular.otf") format("opentype");
 html, body{
     width: 100%;
     height: 100%;
-    font-family: viga;
-    letter-spacing: 0.15em
+    font-family: viga, sans-serif;
+    letter-spacing: 0.15em;
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
 }
 
 .w-100pc{
@@ -23,8 +26,10 @@ html, body{
     width: 50%;
 }
 /*------------------------------------*/
-.h-8pc{
-    height: 8%;
+.mh-auto{
+    min-height: auto;
+    overflow-y: auto;
+    overflow-x:hidden; 
 }
 
 .h-70vh{
@@ -69,11 +74,19 @@ html, body{
 .fl-r{
     float:right;
 }
+
+.fl-l{
+    float:left;
+}
+
+.clr-b{
+    clear: both;
+}
 /*------------------------------------*/
 
 .full-size{
     width: 100%;
-    height: 100%;
+    min-height: auto;
 }
 /*------------------------------------*/
 
@@ -92,10 +105,19 @@ html, body{
 .ta-c{
     text-align: center;
 }
+
+.ta-l{
+    text-align: left;
+}
 /*------------------------------------*/
 
 .po-fix{
     position: fixed;
+}
+
+.po-abs{
+    position: absolute;
+    left: 0;
 }
 /*------------------------------------*/
 
@@ -118,8 +140,13 @@ html, body{
 }
 /*------------------------------------*/
 .dp-inflex-m{
+    display: -webkit-inline-flex;
     display: inline-flex;
+
+    -webkit-align-items: center;
     align-items:center; /*vertiical align middle*/
+    
+    -webkit-justify-content: center;
     justify-content: center;/*flex center horizontal*/
 }
 
@@ -134,12 +161,6 @@ html, body{
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
 
 /*
  * Remove text-shadow in selection highlight:
