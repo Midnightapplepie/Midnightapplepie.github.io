@@ -98,7 +98,8 @@ html, body{
 
 .full-size{
     width: 100%;
-    min-height: auto;
+    min-height: 100%;
+    height: auto;
 }
 
 .full-window{

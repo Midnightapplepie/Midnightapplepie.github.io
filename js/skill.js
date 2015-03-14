@@ -12,7 +12,7 @@ function transform(ele,xyz){
 function scatter(){
     for (var i = 0; i < skills.length; i++) {
         transform(skills[i],skills[i].dataset.xyz)
-
+        
     };
 };
 
