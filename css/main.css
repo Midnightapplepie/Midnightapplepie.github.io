@@ -62,6 +62,9 @@ html, body{
     background: green;
 }
 
+.bg-navy{
+    background: #00292B;
+}
 /*------------------------------------*/
 
 .c-wht{
@@ -69,6 +72,10 @@ html, body{
 }
 .c-trsp{
     color: transparent;
+}
+
+.c-blu{
+    color: #A2D3FF;
 }
 /*------------------------------------*/
 

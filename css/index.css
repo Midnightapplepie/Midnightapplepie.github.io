@@ -18,7 +18,7 @@
 }
 
 .pic-frame{
-	border: 2px solid black;
+	border: 20px solid #222;
 	border-radius: 50%;
 	margin: 2em;
 }
@@ -95,7 +95,7 @@ li{
 	right: 0;
 	bottom: 0;*/
 	z-index: 2;
-	color: yellow;
+	color: #00292B;
 	transition: all 0.3s;
 }
 
@@ -130,7 +130,7 @@ li{
 }
 
 .title{
-	background: #e74d3c;
+	background: #002224;
 }
 
 
