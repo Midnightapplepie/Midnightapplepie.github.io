@@ -1,10 +1,19 @@
+.project{
+	width: 20vh;
+	height: 20vh;
+	text-decoration: none;
+	font-weight: 900;
+	background: black;
+	color: white;
+	margin: 3vh;
+	padding: 2em;
+}
+
+
 /*------------------------------------*/
 
 .message{
 	margin: 0 0 0.5em 0;
-/*	display: none;
-	transform: translateY(100px);
-	transition: transform 1s;*/
 }
 /*------------------------------------*/
 
@@ -57,7 +66,7 @@
 }
 
 
-/*-----------------------*/
+/*--------------Titles---------*/
 .title li span {
 	display: inline-block;
 	font-weight: 900;
@@ -132,7 +141,6 @@ li{
 .title{
 	background: #002224;
 }
-
 
 /*-----------------Skill------------------------------------*/
 
