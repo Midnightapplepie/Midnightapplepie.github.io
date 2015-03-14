@@ -4,8 +4,9 @@ var skills = document.querySelectorAll(".ctn")
 function transform(ele,xyz){
     var xyz = xyz.split('|');
     var location = "translate3d(x,y,z)".replace("x",xyz[0] + "px").replace("y",xyz[1] + "px").replace("z",xyz[2] + "px")
-    console.log(location)
-    ele.style.transform = location
+    
+    ele.style.transform = location;
+    ele.style["-webkit-transform"] = location;
 }
 
 function scatter(){
