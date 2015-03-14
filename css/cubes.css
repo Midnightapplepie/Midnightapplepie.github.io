@@ -1,4 +1,4 @@
-@media screen and (orientation: landscape){
+/*@media screen and (orientation: landscape){
 	.container{
 		width:20vh;
 		height:20vh;
@@ -33,7 +33,7 @@
 		transform: translateZ(10vw);
 	}
 }
-
+*/
 
 .container{
 	-webkit-perspective: 800px;
@@ -43,10 +43,17 @@
 	-webkit-perspective-origin: center;
 	perspective-origin: center;
 
+	width:20vmin;
+	height:20vmin;
+	margin: 3vmin;
+
 	display: inline-block;
 }
 
 .op-bottom{
+	-webkit-transform:translateY(10vmin) rotateX(-90deg);
+	transform:translateY(10vmin) rotateX(-90deg);
+
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 
@@ -63,6 +70,9 @@
 }
 
 .op-front{
+	-webkit-transform: translateZ(10vmin);
+	transform: translateZ(10vmin);
+
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 

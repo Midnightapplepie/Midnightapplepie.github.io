@@ -12,8 +12,8 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/cubes.css">
+        <link rel="stylesheet" href="css/index.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -43,6 +43,7 @@
         </div>
         <div id="about-me" class="w-100pc mh-auto ta-c">
             <div class="h-10vh"></div>
+            <ul class="title wrapper" data-title="about me"></ul>
             <div class="pd-3em fs-4vh d-ib wrapper ta-l">
                 <div class="fl-l dp-ib">
                     <p class="message">"I am passionate about simplicity.</p>
@@ -57,23 +58,130 @@
                 <img class="message pic-frame fl-r dp-ib" src="img/me.png"></img>
             </div>
         </div>
+
+        
+
         <div id="portfolio" class="full-size ta-c pd-t-10pc fs-20px">
             <p>Portfolio</p>
             <a class="d-b pd-3em" href="https://mid9blog.herokuapp.com">Tumblr. Clone</a>
             <a class="d-b pd-3em" href="canvas.html">HTML Canvas</a>
             <a class="d-b pd-3em" href="sudoku.html">Sudoku</a>
         </div>
+        <div class="ta-c">
+            <div class="wrapper ta-l title">
+                <ul class="title wrapper" data-title="Skills"></ul>
+                <button id="scatter" class="dp-ib">Reset</button>
+            </div>
+        </div>
+        <div id="skills" class="full-window ta-c dp-inflex-m of-hide">
+            <div class="skill-box wrapper">
+                <div class="skill" >
+                    <span class="ctn" data-xyz="30|100|-500">Ruby</span>
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="30|600|-5000">JavaScript
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="0|-100|500">Rails
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="-200|300|200">Angular.js
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="120|50|600">Node.js
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="50|0|-500">Express.js
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="150|150|100">HTML5
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="-100|100|100">CSS
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="0|0|-2000">PostgreSQL
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="200|-330|50">SQLite
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="80|100|-1000">Rspec
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="-300|10|600">Bootstrap
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="30|600|1000">Chrome
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="0|0|-600">Sinatra
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="0|0|200">TDD
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="100|60|2000">MVC
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="10|50|300">OO Design
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="500|600|-1000">Capybara
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="-30|-300|-1700">Accounting
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="-30|400|-800">Finance
+                </div>
+                <div class="skill" >
+                    <span class="ctn" data-xyz="100|500|-1000">And to Learn More!!!
+                </div>
+            </div>
+        </div>
+
+
+
+
         <div id="resume" class="full-size pd-t-10pc ta-c">
             <iframe class="w-100pc h-70pc" src="https://resume.creddle.io/resume/b1u7w5k2wvs"></iframe>
         </div>
 
+        <script type="text/javascript">
+
+        function constructTitle(element){
+            var container = element;
+            var letters = element.dataset.title.split("");
+
+            for(var i=0; i<letters.length; i++){
+
+                var li = document.createElement('li');
+                var span = document.createElement('span');
+                span.innerHTML = letters[i];
+                span.setAttribute("data-letter",letters[i]);
+                console.log(span.getAttribute("data-letter"));
+                li.appendChild(span);
+                container.appendChild(li);
+           }
+        }
+
+        var titles = document.querySelectorAll('.title');
+
+        for(i in titles){
+            constructTitle(titles[i]); 
+        }
+
+
+        </script>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/cubes.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/cubes.js"></script>
+        <script src="js/skill.js" ></script>
     </body>
 </html>

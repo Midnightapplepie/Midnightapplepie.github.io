@@ -2,9 +2,9 @@
 
 .message{
 	margin: 0 0 0.5em 0;
-	display: none;
+/*	display: none;
 	transform: translateY(100px);
-	transition: transform 1s;
+	transition: transform 1s;*/
 }
 /*------------------------------------*/
 
@@ -57,16 +57,117 @@
 }
 
 
+/*-----------------------*/
+.title li span {
+	display: inline-block;
+	font-weight: 900;
+	line-height: 1;
+	position: relative;
+	color: hsla(0, 0%,0%,0.6);
+	transform-style: preserve-3d;
+	perspectove: 550px;
+	z-index: 1;
+}
 
-.test{
+ul{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+li{	
+}
+
+.title li{
+	width: 10%;
+	height: 100%;
+	font-size: 3em;
+	display: inline-block;
+}
+
+.title li span:before,
+.title li span:after{
+	position: absolute;
+	content: attr(data-letter);
+	line-height: inherit;
+	left: 0;
+/*	top: 0;
+	right: 0;
+	bottom: 0;*/
+	z-index: 2;
+	color: yellow;
+	transition: all 0.3s;
+}
+
+
+.title li span:before {
+	text-shadow: none;
+	color: hsla(0, 0%, 0%, 0.12);
+}
+
+.title span:before,
+.title span:after{
+	transform-origin: 0 50%;
+}
+
+.title span:before{
+	transform: scanle(1.08,1) skew(0deg, 1deg);
+}
+
+.title span:after{
+	text-shadow:
+		-1px 0px 0px hsla(360, 100%, 100%, 0.1), 
+		3px 0px 1px hsla(0, 0%, 0%, 0.4);
+		transform: rotatY(-15deg);
+}
+
+.title:hover span:before{
+	transform: scale(0.85,1) skew(0deg,20deg);
+}
+
+.title:hover span:after {
+	transform: rotateY(-60deg);
+}
+
+.title{
+	background: #e74d3c;
+}
+
+
+/*-----------------Skill------------------------------------*/
+
+
+.skill{
+	width: 15vmin;
+	height: 15vmin;
+	min-width: 90px;
+	min-height: 90px;
+	position: relative;
 	perspective: 800px;
+	display: inline-block;
+	float: left;
+
 }
 
-.test-c{
-	transform: translateZ(-50000px);
-}
+.ctn{
+	font-size: 0.75em;
+	background: black;
+	opacity: 0.5;
+	color: white;
+	position:absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
 
-.test:hover .test-c{
-	transform: translateZ(0px);
-	transition: all 1s ease;
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-align-items:center;
+	align-items: center;
+	
+	-webkit-justify-content: center;
+	justify-content: center;
+
+	-webkit-transition: all 3s;
+	transition: all 3s;
 }
