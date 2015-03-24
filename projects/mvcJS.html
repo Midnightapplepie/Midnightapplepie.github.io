@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cat Clicking</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<style type="text/css">
+		.hide{
+			display: none;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="page-header"><h1>CLICK A KITTEN {{EventListener with Closure}}</h1></div>
+		<div class="col-md-4">
+			<div id="catList" class="list-group"></div>
+			<div>
+				<button class="btn" id = "admin-btn">Admin</button>
+				<div id="admin-form-container" class="hide">
+					<form id="admin-form">
+						Name: 
+						<input type="text" name="name" >
+						<br>
+						Count: 
+						<input type="number" name="count">
+						<br>
+					</form>
+					<button id="admin-cancel" class="btn">Cancel</button>
+					<button id="admin-save" class="btn">Submit</button>
+				</div>
+			</div>
+		</div>	
+		<div class="col-md-8">
+			<div class="panel panel-primary">
+				<div id="name" class="panel-heading"></div>
+			</div>
+			<div>
+				<img src="" id="image" class="">
+			</div>
+			<div class="panel panel-success">
+				<div id="count" class="panel-heading"></div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="../js/mvcJS.js"></script>
+</body>
+
+
+<!-- // <script type="text/javascript">
+// document.body.innerHTML = '';
+// document.body.style.background="white";
+
+// var nums = [1,2,3];
+// for (var i = 0; i < nums.length; i++) {
+//     var num = nums[i];
+
+//     var elem = document.createElement('div');
+//     elem.textContent = num;
+
+//     elem.addEventListener('click', (function(aNum){
+//     	return function(){
+//     		alert(aNum);
+//     	};
+//     })(num));
+
+//     document.body.appendChild(elem);
+// };
+// </script> -->
